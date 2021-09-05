@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <title>Criar nova conta</title>
+</head>
+<body>
+
+    <section class="container">
+
+        <div class="login-content">
+
+            <img src="assets/Logotipo-FCamara (1).png" alt="Logo Fcamara">
+
+            <form>
+                <h1>Criar uma nova conta</h1>
+                <p>Novo por aqui? Insira seu e-mail que te <br> enviaremos um e-mail de confirmação.</p>
+
+                <div class="login-input">
+                    <input type="text" placeholder="consultor@fcamara.com.br" pattern=".+@fcamara\.com.br" required>
+                    <i data-feather="at-sign"></i>
+                </div>
+
+                <div class="login-button">
+                    <p>Já sou cadastrado</p>
+                    <div class="button">
+                        <button type="submit">Continuar</button>
+                        <i data-feather="chevron-right"></i>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="orange"></div>
+    </section>
+    
+    <script>
+        feather.replace()
+    </script>
+</body>
+</html>
