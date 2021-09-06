@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background:#1B2029;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.seats-container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seats-container h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.seat {
+  background: #ff4500;
+  height: 14px;
+  width: 16px;
+  margin: 3px;
+  /* border-top-left-radius: 10px;
+  border-top-right-radius: 10px; */
+  border-radius: 50%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: black;
+}
+
+.selected {
+  background: #414099;
+}
+
+.occupied {
+  background: white;
+}
+
+.blocked {
+  background: grey;
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.row:nth-of-type(2n+2) {
+  margin-bottom: 1rem;
+}
+
+.seat:nth-of-type(4n+4) {
+  margin-right: 1rem;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.seat.blocked:hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.showcase li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.showcase li small {
+  margin-left: 2px;
+}
+
+p.text {
+  margin: 5px 0;
+}
+
+p.text span {
+  color: #6FEAF6;
+}
+
+
+
+
+
+
+/* 
+
+Abaixo está uma parte do css que ia ser feito sem o :nth-of-type hehe
+
+
+.seat:nth-of-type(10){
+  margin-right: 18px;
+}
+
+.seat:nth-of-type(15) {
+  margin-right: 18px;
+}
+
+.seat:nth-of-type(20) {
+  margin-right: 18px;
+}
+
+.seat:nth-of-type(25) {
+  margin-right: 18px;
+}
+
+.seat:nth-of-type(30) {
+  margin-right: 18px;
+}
+
+.seat:nth-of-type(35) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(5){
+  margin-left: 18px;
+} 
+
+*/
