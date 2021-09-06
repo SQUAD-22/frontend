@@ -58,29 +58,29 @@ section .login-content .login-form p {
 section .login-content .login-form .input-login input {
   width: 400px;
   height: 45px;
-  border-radius: 8px;
-  border: 1px solid #404040;
-  margin-top: 13px;
+  border: none;
   padding: 15px;
   font-size: 18px;
   font-weight: 500;
   outline: none;
-  color: #9d9d9d;
-  background: #fafafa;
+  background: transparent;
 }
 
-section .login-content .login-form .input-login input[type='password']::placeholder {
+section
+  .login-content
+  .login-form
+  .input-login
+  input[type='password']::placeholder {
   font-size: 12px;
 }
 
 section .login-content .login-form .input-login {
-  position: relative;
-}
-
-section .login-content .login-form .input-login svg {
-  position: absolute;
-  right: 20px;
-  top: calc(50% - 7px);
+  display: flex;
+  border: 1px solid #404040;
+  margin-top: 13px;
+  border-radius: 8px;
+  align-items: center;
+  padding-right: 15px;
 }
 
 section .login-content .login-form .button-container {
@@ -94,22 +94,35 @@ section .login-content .login-form .button-container input {
   text-align: center;
 }
 
-section .login-content .login-form .button-container input[type='submit'] {
+#email-input {
+  color: #636363;
+}
+
+section .login-content .login-form .button-container input[type='button'] {
   cursor: pointer;
-  width: 210px;
   height: 47px;
+  padding-left: 13px;
   border: none;
   background: #36357e;
   border-radius: 64px;
   color: #fafafa;
   font-weight: 700;
   font-size: 20px;
-  padding-right: 20px;
+  padding-right: 30px;
   transition: all 0.3s ease-in-out;
 }
 
-section .login-content .login-form .button-container input[type='submit']:hover {
+section
+  .login-content
+  .login-form
+  .button-container
+  input[type='submit']:hover {
   background: #5952d4;
+}
+
+.disabled {
+  background-color: lightgray !important;
+  cursor: not-allowed !important;
 }
 
 section .login-content .login-form .button-container .continue {
@@ -129,6 +142,10 @@ section .orange {
   background: #fe4400;
 }
 
+#password-icon {
+  cursor: pointer;
+}
+
 /* RESPONSIVIDADE */
 
 @media (max-width: 1050px) {
@@ -140,7 +157,7 @@ section .orange {
     margin-bottom: 140px;
   }
 
-  section .login-content .login-form h1{
+  section .login-content .login-form h1 {
     font-size: 25px;
   }
 
@@ -174,15 +191,23 @@ section .orange {
     font-size: 15px;
   }
 
-  section .login-content .login-form .input-login input[type='password']::placeholder {
+  section
+    .login-content
+    .login-form
+    .input-login
+    input[type='password']::placeholder {
     font-size: 10px;
   }
 
-  section .login-content .login-form .button-container .continue input[type='submit'] {
-    width: 190px;
+  section
+    .login-content
+    .login-form
+    .button-container
+    .continue
+    input[type='submit'] {
     height: 30px;
     font-size: 18px;
-    padding-right: 20px;
+    padding-right: 30px;
   }
 }
 
@@ -212,7 +237,12 @@ section .orange {
     font-size: 13px;
   }
 
-  section .login-content .login-form .button-container .continue input[type='submit'] {
+  section
+    .login-content
+    .login-form
+    .button-container
+    .continue
+    input[type='submit'] {
     width: 115px;
     height: 25px;
     font-size: 15px;
@@ -230,7 +260,7 @@ section .orange {
   }
 
   section .login-content .login-form .input-login input {
-    width: 250px;
+    width: 100%;
     height: 30px;
     font-size: 13px;
   }
@@ -239,7 +269,12 @@ section .orange {
     width: 18px;
   }
 
-  section .login-content .login-form .button-container .continue input[type='submit'] {
+  section
+    .login-content
+    .login-form
+    .button-container
+    .continue
+    input[type='submit'] {
     width: 130px;
     height: 25px;
     font-size: 12px;
