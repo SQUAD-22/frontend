@@ -4,19 +4,26 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+}
+
 body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 .container {
     display: flex;
-    max-width: 100vw;
+    justify-content: space-between;
+    width: 100vw;
 }
 
 .login-content {
     display: flex;
     flex-direction: column;
     width: 40vw;
+    margin: 20px;
 }
 
 .login-content img {
@@ -30,6 +37,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .login-content form h1 {
@@ -44,6 +52,64 @@ body {
 .login-content .login-input {
     display: flex;
     align-items: center;
+    margin-top: 15px;
+    width: 430px;
+    height: 50px;
+    padding-left: 18px;
+    border: 1px solid #000;
+    border-radius: 8px;
+}
+
+.login-content .login-input input {
+    width: 90%;
+    height: 40px;
+    border: none;
+    outline: #000;
+    font-size: 1.12rem;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.login-content .login-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width: 400px;
+}
+
+.login-content .login-button a p{
+    font-size: .95rem;
+    font-weight: 500;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.login-content .login-button .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #36357E;
+    width: 160px;
+    height: 47px;
+    border-radius: 60px;
+}
+
+.login-content .login-button button {
+    font-size: 1.25rem;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border: none;
+    background-color: #36357E;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.login-content .login-button .button:hover, button:hover {
+    cursor: pointer;
+}
+
+.login-content .login-button .button svg {
+    color: #fff;
+    margin-left: 5px;
 }
 
 .orange {
