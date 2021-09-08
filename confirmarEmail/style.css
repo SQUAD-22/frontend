@@ -55,33 +55,36 @@ section .login-content .login-form p {
   color: #636363;
 }
 
+section .login-content .login-form .input-login {
+  display: flex;
+  border: 1px solid #404040;
+  margin-top: 13px;
+  border-radius: 8px;
+  align-items: center;
+  padding-right: 15px;
+}
+
 section .login-content .login-form .input-login input {
   width: 400px;
   height: 45px;
-  border-radius: 8px;
-  border: 1px solid #404040;
-  margin-top: 13px;
+  border: none;
   padding: 15px;
   font-size: 18px;
   font-weight: 500;
   outline: none;
   color: #9d9d9d;
-  background: #fafafa;
+  background: transparent;
 }
+
+#password-icon {
+  cursor: pointer;
+}
+
 
 section .login-content .login-form .input-login input[type='password']::placeholder {
   font-size: 12px;
 }
 
-section .login-content .login-form .input-login {
-  position: relative;
-}
-
-section .login-content .login-form .input-login svg {
-  position: absolute;
-  right: 20px;
-  top: calc(50% - 7px);
-}
 
 section .login-content .login-form .button-container {
   display: flex;
@@ -131,7 +134,7 @@ section .orange {
 
 /* RESPONSIVIDADE */
 
-@media (max-width: 1050px) {
+@media (max-width: 1150px) {
   section .login-content {
     width: 50%;
   }
@@ -168,7 +171,7 @@ section .orange {
     font-size: 16px;
   }
 
-  section .login-content .login-form .input-login input {
+  section .login-content .login-form .input-login {
     width: 350px;
     height: 40px;
     font-size: 15px;
@@ -199,29 +202,6 @@ section .orange {
 
 @media (max-width: 360px) {
   section .login-content .login-form h1 {
-    font-size: 20px;
-  }
-
-  section .login-content .login-form p {
-    font-size: 14px;
-  }
-
-  section .login-content .login-form .input-login input {
-    width: 300px;
-    height: 35px;
-    font-size: 13px;
-  }
-
-  section .login-content .login-form .button-container .continue input[type='submit'] {
-    width: 115px;
-    height: 25px;
-    font-size: 15px;
-    padding-right: 20px;
-  }
-}
-
-@media (max-width: 360px) {
-  section .login-content .login-form h1 {
     font-size: 18px;
   }
 
@@ -229,9 +209,12 @@ section .orange {
     font-size: 12px;
   }
 
-  section .login-content .login-form .input-login input {
+  section .login-content .login-form .input-login {
     width: 250px;
     height: 30px;
+  }
+
+  section .login-content .login-form .input-login input {
     font-size: 13px;
   }
 
