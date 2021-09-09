@@ -36,8 +36,8 @@ section .login-content .logo {
 }
 
 section .login-content .logo img {
-  width: 180px;
-  height: 40px;
+  width: 11.25rem;
+  height: 2.5rem;
 }
 
 section .login-content .login-form {
@@ -46,11 +46,11 @@ section .login-content .login-form {
 
 section .login-content .login-form h1 {
   font-weight: 500;
-  font-size: 36px;
+  font-size: 2.25rem
 }
 
 section .login-content .login-form p {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   color: #636363;
 }
@@ -65,11 +65,11 @@ section .login-content .login-form .input-login {
 }
 
 section .login-content .login-form .input-login input {
-  width: 400px;
-  height: 45px;
+  width: 25rem;
+  height: 2.813rem;
   border: none;
   padding: 15px;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   outline: none;
   color: #9d9d9d;
@@ -79,12 +79,6 @@ section .login-content .login-form .input-login input {
 #password-icon {
   cursor: pointer;
 }
-
-
-section .login-content .login-form .input-login input[type='password']::placeholder {
-  font-size: 12px;
-}
-
 
 section .login-content .login-form .button-container {
   display: flex;
@@ -99,14 +93,14 @@ section .login-content .login-form .button-container input {
 
 section .login-content .login-form .button-container input[type='submit'] {
   cursor: pointer;
-  width: 210px;
-  height: 47px;
+  width: 13.125rem;
+  height: 2.938rem;
   border: none;
   background: #36357e;
   border-radius: 64px;
   color: #fafafa;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.25rem;
   padding-right: 20px;
   transition: all 0.3s ease-in-out;
 }
@@ -144,17 +138,17 @@ section .orange {
   }
 
   section .login-content .login-form h1{
-    font-size: 25px;
+    font-size: 1.563rem;
   }
 
   section .login-content .login-form p {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   section .login-content .login-form .input-login input {
-    width: 350px;
-    height: 40px;
-    font-size: 15px;
+    width: 21.875rem;
+    height: 2.5rem;
+    font-size: 0.938rem;
   }
 }
 
@@ -164,27 +158,23 @@ section .orange {
   }
 
   section .login-content .login-form h1 {
-    font-size: 25px;
+    font-size: 1.563rem;
   }
 
   section .login-content .login-form p {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   section .login-content .login-form .input-login {
-    width: 350px;
-    height: 40px;
-    font-size: 15px;
-  }
-
-  section .login-content .login-form .input-login input[type='password']::placeholder {
-    font-size: 10px;
+    width: 21.875rem;
+    height: 2.5rem;
+    font-size: 0.938rem;
   }
 
   section .login-content .login-form .button-container .continue input[type='submit'] {
-    width: 190px;
-    height: 30px;
-    font-size: 18px;
+    width: 11.875rem;
+    height: 1.875rem;
+    font-size: 1.125rem;
     padding-right: 20px;
   }
 }
@@ -202,35 +192,35 @@ section .orange {
 
 @media (max-width: 360px) {
   section .login-content .login-form h1 {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   section .login-content .login-form p {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   section .login-content .login-form .input-login {
-    width: 250px;
-    height: 30px;
+    width: 15.625rem;
+    height: 1.875rem;
   }
 
   section .login-content .login-form .input-login input {
-    font-size: 13px;
+    font-size: 0.813rem;
   }
 
   section .login-content .login-form .input-login svg {
-    width: 18px;
+    width: 1.125rem;
   }
 
   section .login-content .login-form .button-container .continue input[type='submit'] {
-    width: 130px;
-    height: 25px;
-    font-size: 12px;
+    width: 8.125rem;
+    height: 1.563rem;
+    font-size: 0.75rem;
     padding-right: 15px;
   }
 
   section .login-content .login-form .button-container .continue svg {
-    width: 20px;
+    width: 1.25rem;
     padding-left: 5px;
   }
 }
