@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FCAgenda - Agendamento</title>
+    <link rel="stylesheet" href="2etapa.css" />
+    <script src="2etapa.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Componente de carregamento -->
+    <div id="loading">
+      <div class="loader">
+        <div></div>
+        <div></div>
+      </div>
+      <span>Carregando...</span>
+    </div>
+
+    <section class="left_container">
+      <h1>Ótimo!</h1>
+      <h2>
+        Agora, precisamos que você selecione<br />a sua estação de trabalho.
+      </h2>
+
+      <div class="detail">
+        <div>
+          <div class="available"></div>
+          <span>Disponível</span>
+        </div>
+        <div>
+          <div class="occupied"></div>
+          <span>Ocupado</span>
+        </div>
+        <div>
+          <div class="unavailable"></div>
+          <span>Indisponível</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="right_container">
+      <div id="select_desk"></div>
+      <button>Agendar</button>
+    </section>
+  </body>
+</html>
