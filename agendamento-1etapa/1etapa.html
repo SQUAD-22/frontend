@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FCAgenda - Agendamento</title>
+    <link rel="stylesheet" href="1etapa.css" />
+    <script src="1etapa.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Componente de carregamento -->
+    <div id="loading">
+      <div class="loader">
+        <div></div>
+        <div></div>
+      </div>
+      <span>Carregando...</span>
+    </div>
+
+    <section class="left_container">
+      <h1>Novo agendamento</h1>
+      <h2>
+        Primeiro, precisamos saber quando e<br />onde você quer trabalhar.
+      </h2>
+    </section>
+
+    <section class="right_container">
+      <p>Quero trabalhar na filial...</p>
+      <div id="office_select"></div>
+
+      <div id="date_select">
+        <div>
+          <p style="margin-bottom: 10px">No dia...</p>
+          <input id="date_input" type="date" />
+        </div>
+        <button id="continue_button" class="orange">Continuar</button>
+      </div>
+    </section>
+  </body>
+</html>
