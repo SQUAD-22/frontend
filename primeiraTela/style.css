@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  /* border: 1px solid orange; */
+}
+
+header {
+    margin: 30px 80px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+header img {
+    width: 181px;
+    height: 40px;
+}
+main {
+   display: flex;
+}
+.container_left{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.container_left img {
+    width: 400px;
+    margin-left: 80px;
+}
+
+.container_right {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+b{
+    margin-left: 2px;
+    color: #FE4400;
+}
+.container_right h2{
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.container_right h1{
+    margin-top: 40px;
+    margin-bottom:40px;
+    font-weight: 600;
+    color: #000;
+}
+
+.container_right p {
+    width: 765px;
+    text-align: center;
+    color: #636363;
+    font-weight: 500;
+}
+
+.button_area {
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.button_area a {
+    outline: none;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    justify-content: center;
+}
+.button_area .cadastrar {
+    
+    background-color: #4B4FA1;
+    width: 182px;
+    display: flex;
+
+    font-size: 22px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 64px;
+    color: #FFF;
+}
+.button_area .entrar {
+    background-color: #FC6027;
+    width: 182px;
+    display: flex;
+  
+    font-size: 22px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 64px;
+    color: #FFF;
+}
+.button_area .entrar:hover {
+
+    background: #FE4400;
+}
+
+.button_area .cadastrar:hover{
+    background: #414099;
+}
+
+
+
+.button_area .entrar img,
+.button_area .cadastrar img {
+    margin-left: 8px;
+}
