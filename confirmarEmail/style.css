@@ -7,13 +7,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-section {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  background: #e5e5e5;
-}
-
 section .logo {
   display: flex;
   flex-direction: column;
@@ -21,9 +14,9 @@ section .logo {
 }
 
 section .login-content {
-  background: #fafafa;
+  background: #FFFFFF;
   height: 100%;
-  width: 40%;
+  min-width: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,8 +25,10 @@ section .login-content {
 
 section .login-content .logo {
   margin-top: 93px;
-  margin-bottom: 160px;
+  margin-bottom: 100px;
+  margin-right: 270px;
 }
+
 
 section .login-content .logo img {
   width: 11.25rem;
@@ -51,6 +46,7 @@ section .login-content .login-form h1 {
 
 section .login-content .login-form p {
   font-size: 1.125rem;
+  margin-bottom: 41px;
   font-weight: 500;
   color: #636363;
 }
@@ -96,7 +92,7 @@ section .login-content .login-form .button-container input[type='submit'] {
   width: 13.125rem;
   height: 2.938rem;
   border: none;
-  background: #36357e;
+  background: #FC6027;
   border-radius: 64px;
   color: #fafafa;
   font-weight: 700;
@@ -106,7 +102,7 @@ section .login-content .login-form .button-container input[type='submit'] {
 }
 
 section .login-content .login-form .button-container input[type='submit']:hover {
-  background: #5952d4;
+  background: #fe4400;
 }
 
 section .login-content .login-form .button-container .continue {
@@ -120,79 +116,73 @@ section .login-content .login-form .button-container svg {
   color: #fafafa;
 }
 
-section .orange {
-  width: 60%;
-  height: 100%;
-  background: #fe4400;
-}
 
 /* RESPONSIVIDADE */
 
-@media (max-width: 1150px) {
+@media (max-width:1050px) {
   section .login-content {
-    width: 50%;
-  }
-
-  section .login-content .logo {
-    margin-bottom: 140px;
-  }
-
-  section .login-content .login-form h1{
-    font-size: 1.563rem;
-  }
-
-  section .login-content .login-form p {
-    font-size: 1rem;
-  }
-
-  section .login-content .login-form .input-login input {
-    width: 21.875rem;
-    height: 2.5rem;
-    font-size: 0.938rem;
-  }
-}
-
-@media (max-width: 900px) {
-  section .login-content {
-    width: 50%;
-  }
-
-  section .login-content .login-form h1 {
-    font-size: 1.563rem;
-  }
-
-  section .login-content .login-form p {
-    font-size: 1rem;
-  }
-
-  section .login-content .login-form .input-login {
-    width: 21.875rem;
-    height: 2.5rem;
-    font-size: 0.938rem;
-  }
-
-  section .login-content .login-form .button-container .continue input[type='submit'] {
-    width: 11.875rem;
-    height: 1.875rem;
-    font-size: 1.125rem;
-    padding-right: 20px;
+   min-width: 0;
   }
 }
 
 @media (max-width: 800px) {
   section .login-content {
-    width: 100%;
-    height: auto;
+    min-width: 0
   }
 
-  section .orange {
-    width: 0;
-  }
+  section .login-content {
+    min-width: 0;
+   }
+ }
+ 
+ @media (max-width:800px) {
+   section .login-content {
+    min-width: 0;
+   }
+ 
+   section .login-content .logo img {
+     width: 9.25rem;
+     height: 2rem;
+   }
+ 
+   section .login-content .login-form h1 {
+     font-size: 1.75rem;
+   }
+ 
+   section .login-content .login-form p {
+     font-size: 0.80rem;
+   }
+ 
+   section .login-content .login-form .input-login {
+     width: 20.625rem;
+     height: 2.3rem;
+   }
+ 
+   section .login-content .login-form .input-login input{
+     font-size: 0.9rem;
+   }
+ 
+   section .login-content .login-form .button-container input[type='submit'] {
+     width: 10rem;
+     height: 2.1rem;
+     font-size: 0.9rem;
+     padding-right: 20px;
+   }
+
 }
 
-@media (max-width: 360px) {
+@media (max-width: 470px) {
+  section .login-content .logo {
+    margin-right: 0;
+  }
+
+  section .login-content .logo img {
+    width: 9.25rem;
+    height: 2rem;
+  }
+
   section .login-content .login-form h1 {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 
   section .login-content .login-form p {
@@ -204,23 +194,18 @@ section .orange {
     height: 1.875rem;
   }
 
-  section .login-content .login-form .input-login input {
-    font-size: 0.813rem;
-  }
-
-  section .login-content .login-form .input-login svg {
-    width: 1.125rem;
+  section .login-content .login-form .input-login input{
+    font-size: 0.625rem;
   }
 
   section .login-content .login-form .button-container .continue input[type='submit'] {
-    width: 8.125rem;
-    height: 1.563rem;
-    font-size: 0.75rem;
-    padding-right: 15px;
+    width: 9.1rem;
+    height: 1.8rem;
+    font-size: 0.813rem;
+    padding-right: 20px;
   }
 
   section .login-content .login-form .button-container .continue svg {
-    width: 1.25rem;
-    padding-left: 5px;
-  }
+    width: 20px;
+  }    
 }
