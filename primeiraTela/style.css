@@ -8,109 +8,116 @@
   /* border: 1px solid orange; */
 }
 
-header {
-    margin: 30px 80px;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-}
-header img {
-    width: 181px;
-    height: 40px;
-}
 main {
-   display: flex;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
-.container_left{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+
+/* Container da esquerda, com a ilustração*/
+.container_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .container_left img {
-    width: 400px;
-    margin-left: 80px;
+  width: 400px;
 }
 
+@media (max-width: 1024px) {
+  .container_left {
+    display: none;
+  }
+}
+
+/* Container da direita */
 .container_right {
-    width: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
 }
 
-b{
-    margin-left: 2px;
-    color: #FE4400;
+.container_right .orange {
+  margin-left: 2px;
+  color: #fe4400;
+  font-weight: bold;
 }
-.container_right h2{
-    margin-top: 40px;
-    font-size: 24px;
-    font-weight: 600;
+
+.container_right h1 {
+  margin-top: 40px;
+  font-weight: bold;
+  text-align: center;
 }
-.container_right h1{
-    margin-top: 40px;
-    margin-bottom:40px;
-    font-weight: 600;
-    color: #000;
+
+.container_right h2 {
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .container_right p {
-    width: 765px;
-    text-align: center;
-    color: #636363;
-    font-weight: 500;
+  width: 70%;
+  text-align: center;
+  color: #636363;
 }
 
 .button_area {
-    width: 600px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 35px;
 }
 
-.button_area a {
-    outline: none;
-    text-decoration: none;
-    text-transform: none;
-    text-align: center;
-    justify-content: center;
+.button_area button {
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  justify-content: center;
+  border: none;
+  align-items: center;
 }
+
+.button_area button:hover {
+  cursor: pointer;
+}
+
 .button_area .cadastrar {
-    
-    background-color: #4B4FA1;
-    width: 182px;
-    display: flex;
+  background-color: #4b4fa1;
+  display: flex;
 
-    font-size: 22px;
-    font-weight: 600;
-    padding: 10px;
-    border-radius: 64px;
-    color: #FFF;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 64px;
+  color: #fff;
+  margin-right: 15px;
 }
+
 .button_area .entrar {
-    background-color: #FC6027;
-    width: 182px;
-    display: flex;
-  
-    font-size: 22px;
-    font-weight: 600;
-    padding: 10px;
-    border-radius: 64px;
-    color: #FFF;
+  background-color: #fc6027;
+  padding: 10px 20px;
+  display: flex;
+
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 64px;
+  color: #fff;
 }
+
 .button_area .entrar:hover {
-
-    background: #FE4400;
+  background: #fe4400;
 }
 
-.button_area .cadastrar:hover{
-    background: #414099;
+.button_area .cadastrar:hover {
+  background: #414099;
 }
-
-
 
 .button_area .entrar img,
 .button_area .cadastrar img {
-    margin-left: 8px;
+  margin-left: 8px;
 }

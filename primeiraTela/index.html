@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/icone.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>FCAgenda - Bem-vindo</title>
+  </head>
 
-    <link rel="shortcut icon" href="/primeiraTela/assets/icone.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/primeiraTela/style.css">
-    <title>Seja Bem-vindo, #SangueLaranja</title>
-    
-</head>
-
-
-
-<body>
-
-    <header>
-        <img src="/primeiraTela/assets/Logotipo-FCamara.png" alt="">
-    </header>
+  <body>
     <main>
+      <div class="container_left">
+        <img src="/primeiraTela/assets/img2.svg" alt="" />
+      </div>
 
-   
-    <div class="container_left">
-        <img src="/primeiraTela/assets/img2.svg" alt="">
-    </div>
-    <div class="container_right">
-        <h2>Bem-vindo,<b>#SangueLaranja</b></h2>
-        <h1>Os escritórios estão abertos!!</h1>
-        <p>Estamos funcionando com  a capacidade reduzida, por isso para garantir o seu lugar acesse o portal e escolha o dia que você vai e a sua mesa.</p>
+      <div class="container_right">
+        <img
+          src="/primeiraTela/assets/Logotipo-FCamara.png"
+          alt="Logo FCamara"
+          width="150"
+        />
+
+        <h2>Bem-vindo, <span class="orange">#SangueLaranja</span></h2>
+        <h1>Os escritórios estão abertos!</h1>
+        <p>
+          Porém, esta abertura será gradual. <br />Vamos te ajudar a organizar
+          sua volta às atividades presenciais.
+        </p>
         <h1>Acessar portal</h1>
 
         <div class="button_area">
-            <a href="#" class="cadastrar">Cadastrar <img src="/primeiraTela/assets/arrow.svg" alt="arrow"></a>
-            <a href="#" class="entrar">Entrar<img src="/primeiraTela/assets/arrow.svg" alt="arrow"></a>
+          <button onclick="location.href='/register'" class="cadastrar">
+            Cadastrar <img src="/primeiraTela/assets/arrow.svg" alt="arrow" />
+          </button>
+          <button onclick="location.href='/login'" class="entrar">
+            Entrar <img src="/primeiraTela/assets/arrow.svg" alt="arrow" />
+          </button>
         </div>
 
-        <p>Estamos seguindo todos os protocolos de distanciamento e higenização para segurança de todos.</p>
-    </div>
- </main>
-</body>
+        <p>
+          Estamos seguindo todos os protocolos de distanciamento e higenização
+          para a segurança de todos.
+        </p>
+      </div>
+    </main>
+  </body>
 </html>
