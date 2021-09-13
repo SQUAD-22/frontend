@@ -7,7 +7,7 @@ const dateInput = document.getElementById('date_input');
 dateInput.min = new Date().toISOString().split('T')[0];
 
 let selectedOffice = '';
-const listOfficesEndpoint = 'http://localhost:3333/office/list';
+const listOfficesEndpoint = 'https://fcagenda.herokuapp.com/office/list';
 
 /**
  *  Esta função implementa a funcionalidade
