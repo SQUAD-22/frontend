@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+  --orange: #fe4400;
+  --secondary-orange: #d03800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 15px;
+
+  width: 100%;
+  max-width: 400px;
+  height: 95vh;
+
+  margin: 0 auto;
+}
+
+section img {
+  width: 180px;
+}
+
+section form {
+  align-items: center;
+  width: 100%;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+
+  padding: 10px 15px;
+  border: 1px solid rgb(39, 39, 39);
+  border-radius: 10px;
+}
+
+.input-container input {
+  border: none;
+
+  font-size: 1.1rem;
+
+  width: 100%;
+}
+
+.input-container input:focus {
+  outline: none;
+}
+
+.input-container i {
+  margin-left: 10px;
+  color: rgb(31, 31, 31);
+}
+
+#toggle-password:hover {
+  cursor: pointer;
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  border: none;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 64px;
+  color: #fafafa;
+  background-color: var(--orange);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--secondary-orange);
+}
+
+.enabled i {
+  display: none;
+}
+
+.disabled {
+  background-color: lightgray;
+}
+
+.disabled span {
+  display: none;
+}
+
+.disabled i {
+  color: rgb(39, 39, 39);
+}
+
+.disabled:hover {
+  background-color: rgb(197, 197, 197);
+  cursor: wait;
+}
+
+#error {
+  color: rgb(241, 62, 62);
+  font-weight: bold;
+  text-align: center;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FCAgenda - Login</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="login.js" defer></script>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <section>
+      <img src="assets/Logotipo-FCamara (1).png" alt="" />
+      <br />
+      <h1>Login</h1>
+      <p>Insira suas credenciais para continuar.</p>
+      <br />
+      <form id="form">
+        <div class="input-container">
+          <input
+            type="text"
+            id="email-input"
+            placeholder="consultor@fcamara.com.br"
+            title="Digite um email com o domínio fcamara.com.br"
+            required
+          />
+          <i class="fas fa-at fa-lg"></i>
+        </div>
+
+        <br />
+
+        <div class="input-container">
+          <input
+            type="password"
+            id="password-input"
+            placeholder="******"
+            title="Digite um email com o domínio fcamara.com.br"
+            required
+          />
+          <i id="toggle-password" class="fas fa-eye fa-lg"></i>
+        </div>
+
+        <br />
+
+        <div class="actions">
+          <button id="button" type="submit" class="enabled">
+            <span>Entrar</span>
+            <i class="fas fa-circle-notch fa-spin"></i>
+          </button>
+        </div>
+      </form>
+      <br />
+      <span id="error"></span>
+    </section>
+  </body>
+</html>
