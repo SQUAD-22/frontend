@@ -1,3 +1,5 @@
+/* CSS da terceira etapa do agendamento (/agendar/etapa3) */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 
 * {
@@ -86,10 +88,10 @@ section .button input[type='button']:hover {
 
 /* Responsivo */
 
-@media (max-width: 1500px) {
+/* @media (max-width: 1500px) {
   section .content .info {
   }
-}
+} */
 
 @media (max-width: 1300px) {
 }

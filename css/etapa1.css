@@ -1,9 +1,10 @@
+/* CSS da primeira etapa do agendamento (/agendar/etapa1) */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 
 :root {
-  --available: #7dd836;
-  --occupied: #f8c96e;
-  --unavailable: #c4c4c4;
+  --orange: #fe4400;
+  --secondary-orange: #d03800;
 }
 
 * {
@@ -30,26 +31,8 @@ body {
 
 /* Container da esquerda */
 .left_container {
-  display: flex;
+  display: 'flex';
   flex-direction: column;
-}
-
-.detail {
-  display: flex;
-  flex-direction: column;
-}
-
-.detail div {
-  display: flex;
-  margin: 5px 0px;
-  align-items: center;
-}
-
-.detail div div {
-  width: 25px;
-  height: 25px;
-  border-radius: 100%;
-  margin-right: 5px;
 }
 
 h1 {
@@ -67,9 +50,6 @@ h2 {
 /* Container da direita */
 .right_container {
   margin-left: 100px;
-  align-items: flex-end;
-  display: flex;
-  flex-direction: column;
 }
 
 button {
@@ -78,68 +58,56 @@ button {
 
   padding: 10px 20px;
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 600;
   border-radius: 64px;
   color: #fff;
-
-  background-color: #fe4400;
-  width: fit-content;
-
-  margin-top: 10px;
 }
 
 button:hover {
   cursor: pointer;
+  background-color: var(--secondary-orange);
 }
 
-#select_desk {
-  padding: 15px;
-  display: grid;
+/* Selecionar escritório */
 
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: repeat(48, 1fr);
-
-  gap: 15px;
-
-  max-width: 500px;
-  overflow-x: auto;
+#office_select {
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.option {
-  border-radius: 100%;
-  width: 50px;
-  height: 50px;
+.office_option {
+  background-color: #fafafa;
+  padding: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 500px;
+
+  border-bottom: 1px solid lightgray;
 }
 
-.option:hover {
+.office_option:hover {
+  background-color: #e4e4e4;
   cursor: pointer;
 }
 
-.available {
-  background-color: var(--available);
+.option_selected {
+  background-color: #e4e4e4;
 }
 
-.occupied {
-  background-color: var(--occupied);
+/* Selecionar data */
+#date_select {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 50px;
 }
 
-.occupied:hover {
-  cursor: not-allowed;
-}
-
-.unavailable {
-  background-color: var(--unavailable);
-}
-
-.unavailable:hover {
-  cursor: not-allowed;
-}
-
-.selected {
-  border: 2px solid black;
+input {
+  height: fit-content;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #636363;
 }
 
 /* Componente de carregamento */
@@ -165,24 +133,10 @@ button:hover {
   .right_container {
     margin: 0;
     margin-top: 20px;
+    width: 90%;
+  }
+  .office_option {
     width: 100%;
-  }
-  body {
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 20px;
-  }
-  #select_desk {
-    max-width: 100%;
-  }
-  .detail {
-    flex-direction: row;
-    margin-bottom: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .detail div {
-    margin-right: 15px;
   }
 }
 

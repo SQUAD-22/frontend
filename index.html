@@ -4,23 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/icone.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/welcome.css" />
     <title>FCAgenda - Bem-vindo</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
     <main>
       <div class="container_left">
-        <img src="/primeiraTela/assets/img2.svg" alt="" />
+        <img src="./assets/pessoa-computador.svg" alt="" />
       </div>
 
       <div class="container_right">
-        <img
-          src="/primeiraTela/assets/Logotipo-FCamara.png"
-          alt="Logo FCamara"
-          width="150"
-        />
+        <img src="./assets/logo.png" alt="Logo FCamara" width="180" />
 
         <h2>Bem-vindo, <span class="orange">#SangueLaranja</span></h2>
         <h1>Os escritórios estão abertos!</h1>
@@ -32,10 +36,10 @@
 
         <div class="button_area">
           <button onclick="location.href='/register'" class="cadastrar">
-            Cadastrar <img src="/primeiraTela/assets/arrow.svg" alt="arrow" />
+            Cadastrar <i class="fas fa-chevron-right"></i>
           </button>
           <button onclick="location.href='/login'" class="entrar">
-            Entrar <img src="/primeiraTela/assets/arrow.svg" alt="arrow" />
+            Entrar <i class="fas fa-chevron-right"></i>
           </button>
         </div>
 

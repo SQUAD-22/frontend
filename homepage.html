@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FCAgenda - Home</title>
-    <link rel="stylesheet" href="homepage.css" />
-    <script src="homepage.js" defer></script>
+    <link rel="stylesheet" href="./css/homepage.css" />
+    <script src="./js/homepage.js" defer></script>
   </head>
 
   <body>
@@ -20,16 +20,26 @@
     </div>
 
     <section class="left_container">
-      <img src="assets/logo.png" width="180px" />
+      <img src="./assets/logo.png" width="180px" />
       <h1>Bom dia, usuário!</h1>
       <h2>Como podemos te ajudar?</h2>
-      <button class="orange">Novo agendamento</button>
-      <button class="blue">Gerenciar agendamentos</button>
+      <button
+        onclick='window.location.href="/agendamento/etapa1"'
+        class="orange"
+      >
+        Novo agendamento
+      </button>
+      <button
+        onclick='window.location.href="/agendamento/gerenciar"'
+        class="blue"
+      >
+        Gerenciar agendamentos
+      </button>
       <h2>Seu próximo agendamento é<br />Quarta-feira, dia 20/09/2021.</h2>
     </section>
 
     <section class="right_container">
-      <img src="assets/illustration.svg" />
+      <img src="./assets/pessoa-calendario.svg" />
     </section>
   </body>
 </html>
