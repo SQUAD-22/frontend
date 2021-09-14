@@ -3,6 +3,7 @@
 :root {
   --orange: #fe4400;
   --secondary-orange: #d03800;
+  --error: rgb(241, 62, 62);
 }
 
 * {
@@ -13,6 +14,11 @@
   transition: all 0.2s ease-in-out;
 }
 
+/* 
+Como só temos um section principal, podemos alterar diretamente ela.
+Apenas um flex column centralizado com padding para o mobile
+
+*/
 section {
   display: flex;
   flex-direction: column;
@@ -36,6 +42,11 @@ section form {
   width: 100%;
 }
 
+/*
+Container do input
+A gente envolve o <input/> dentro desse container pra
+ficar mais simples de posicionar o ícone (se houver).
+*/
 .input-container {
   display: flex;
   align-items: center;
@@ -47,9 +58,7 @@ section form {
 
 .input-container input {
   border: none;
-
-  font-size: 1.1rem;
-
+  font-size: 1.2rem;
   width: 100%;
 }
 
@@ -57,11 +66,17 @@ section form {
   outline: none;
 }
 
+/*
+Se tiver ícone, adicionar ele e criar uma margin pra esquerda (empurrando o input)
+*/
 .input-container i {
   margin-left: 10px;
   color: rgb(31, 31, 31);
 }
 
+/*
+Ícone de alterar visibilidade da senha.
+*/
 #toggle-password:hover {
   cursor: pointer;
 }
@@ -92,10 +107,16 @@ button:hover {
   background-color: var(--secondary-orange);
 }
 
+/*
+Botão em seu estado normal, escondendo o ícone de carregamento.
+*/
 .enabled i {
   display: none;
 }
 
+/*
+Quando o botão está "disabled", ele esconde o texto e altera as cores.
+*/
 .disabled {
   background-color: lightgray;
 }
@@ -114,7 +135,7 @@ button:hover {
 }
 
 #error {
-  color: rgb(241, 62, 62);
+  color: var(--error);
   font-weight: bold;
   text-align: center;
 }

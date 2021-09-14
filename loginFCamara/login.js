@@ -27,9 +27,13 @@ function handleLogin(e) {
   const email = emailInput.value;
   const password = passwordInput.value;
 
+  //Colocar o botão de envio em modo de carregamento
   button.className = 'disabled';
+  button.disabled = true;
+  //Retira o erro
   errorText.innerText = '';
 
+  //Chama a API
   fetch(loginEndpoint, {
     method: 'POST',
     body: JSON.stringify({ email, password }),
@@ -39,11 +43,15 @@ function handleLogin(e) {
   })
     .then((data) => data.json())
     .then((data) => {
+      //Caso tenha erro, adiciona erro na página
       if (data.errorId) {
         errorText.innerText = data.message;
         button.className = 'enabled';
+        button.disabled = false;
       } else {
+        //Se não tiver erro, guarda o token de autenticação
         localStorage.setItem('token', data.token);
+        //Redireciona o usuário pra página principal
         window.location.href = '/home';
       }
     });
