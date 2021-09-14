@@ -17,7 +17,6 @@
 /* 
 Como só temos um section principal, podemos alterar diretamente ela.
 Apenas um flex column centralizado com padding para o mobile
-
 */
 section {
   display: flex;
@@ -40,6 +39,11 @@ section img {
 section form {
   align-items: center;
   width: 100%;
+}
+
+section h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
 }
 
 /*

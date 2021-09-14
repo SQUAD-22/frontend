@@ -1,30 +1,31 @@
 const emailInput = document.getElementById('email-input');
+const nameInput = document.getElementById('name-input');
 const passwordInput = document.getElementById('password-input');
 const togglePassword = document.getElementById('toggle-password');
 const form = document.getElementById('form');
 const button = document.getElementById('button');
 const errorText = document.getElementById('error');
 
-const loginEndpoint = 'https://fcagenda.herokuapp.com/auth/login';
+const verifyEndpoint = 'https://fcagenda.herokuapp.com/auth/verifyemail';
 
-// Adicionar lógica de clicar no botão para ver senha
-function handleToggle() {
-  if (passwordInput.type == 'text') {
-    passwordInput.type = 'password';
-    togglePassword.classList.replace('fa-eye-slash', 'fa-eye');
-  } else {
-    passwordInput.type = 'text';
-    togglePassword.classList.replace('fa-eye', 'fa-eye-slash');
-  }
+const params = new URLSearchParams(window.location.search);
+const email = params.get('email');
+const token = params.get('token');
+
+//Verificar se os dados foram passados.
+if (!email || !token) {
+  alert('Não conseguimos extrair as informações necessárias. Tente novamente.');
+  window.location.href = '/login';
 }
 
-togglePassword.addEventListener('click', handleToggle);
+//Colocar o email do usuário no campo
+emailInput.value = email;
 
-//Adicionar lógica de login
+//Enviar os dados para o backend
 function handleSubmit(e) {
   e.preventDefault();
 
-  const email = emailInput.value;
+  const name = nameInput.value;
   const password = passwordInput.value;
 
   //Colocar o botão de envio em modo de carregamento
@@ -34,9 +35,9 @@ function handleSubmit(e) {
   errorText.innerText = '';
 
   //Chama a API
-  fetch(loginEndpoint, {
+  fetch(verifyEndpoint, {
     method: 'POST',
-    body: JSON.stringify({ email, password }),
+    body: JSON.stringify({ token, name, password }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
@@ -58,3 +59,16 @@ function handleSubmit(e) {
 }
 
 form.addEventListener('submit', handleSubmit);
+
+// Adicionar lógica de clicar no botão para ver senha
+function handleToggle() {
+  if (passwordInput.type == 'text') {
+    passwordInput.type = 'password';
+    togglePassword.classList.replace('fa-eye-slash', 'fa-eye');
+  } else {
+    passwordInput.type = 'text';
+    togglePassword.classList.replace('fa-eye', 'fa-eye-slash');
+  }
+}
+
+togglePassword.addEventListener('click', handleToggle);

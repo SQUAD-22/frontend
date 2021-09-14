@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FCAgenda - Login</title>
-    <link rel="stylesheet" href="auth.css" />
+    <title>FCAgenda - Confirme seu email</title>
+    <link rel="stylesheet" href="../loginFCamara/auth.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -13,19 +13,20 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="login.js" defer></script>
+    <script src="verifyemail.js" defer></script>
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <section>
       <img src="assets/Logotipo-FCamara (1).png" alt="" />
       <br />
-      <h1>Login</h1>
-      <p>Insira suas credenciais para continuar.</p>
+      <h1>Confirmar e-mail</h1>
+      <p>Insira seu nome e senha para continuarmos.</p>
       <br />
       <form id="form">
         <div class="input-container">
           <input
+            readonly
             type="text"
             id="email-input"
             placeholder="consultor@fcamara.com.br"
@@ -34,6 +35,19 @@
           />
           <i class="fas fa-at fa-lg"></i>
         </div>
+
+        <br/>
+
+        <div class="input-container">
+          <input
+            id="name-input"
+            placeholder="Seu nome completo"
+            title="Digite um email com o domínio fcamara.com.br"
+            required
+          />
+          <i class="fas fa-user fa-lg"></i>
+        </div>
+
 
         <br />
 
@@ -52,13 +66,12 @@
 
         <div class="actions">
           <button id="button" type="submit" class="enabled">
-            <span>Entrar</span>
+            <span>Confirmar e-mail</span>
             <i class="fas fa-circle-notch fa-spin"></i>
           </button>
         </div>
       </form>
       <br />
       <span id="error"></span>
-    </section>
   </body>
 </html>
