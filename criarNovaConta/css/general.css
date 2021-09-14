@@ -11,6 +11,7 @@ a {
 
 body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    padding: 20px;
 }
 
 .container {
@@ -28,11 +29,27 @@ body {
 .login-content {
     display: flex;
     align-items: center;
+    max-width: 1100px;
 }
 
 .login-content .background-section {
+    width: 50%;
     margin-left: 80px;
     margin-right: 80px;   
+}
+
+.login-content .background-section img {
+    max-width: 100%;
+}
+
+.login-content .form-section {
+    width: 50%;
+}
+
+.login-content .form-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .login-content .form-section h1 {
@@ -58,8 +75,9 @@ body {
 }
 
 .login-content .form-section .login-input input {
-    width: 90%;
+    width: 85%;
     height: 40px;
+    padding-right: 20px;
     border: none;
     outline: #000;
     font-size: 1.12rem;
@@ -75,6 +93,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
 }
 
 .login-content .form-section .login-button a {
