@@ -28,7 +28,7 @@ function generateCount(count) {
 }
 
 fetch(summaryEndpoint, {
-  method: 'POST',
+  method: 'GET',
   headers: {
     'Content-type': 'application/json; charset=UTF-8',
     authorization: 'Bearer ' + token,

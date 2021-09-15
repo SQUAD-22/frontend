@@ -11,8 +11,18 @@
       href="../assets/favicon.ico"
       type="image/x-icon"
     />
+    <script src="../js/etapa3.js" defer></script>
   </head>
   <body>
+    <!-- Componente de carregamento -->
+    <div id="loading">
+      <div class="loader">
+        <div></div>
+        <div></div>
+      </div>
+      <span>Carregando...</span>
+    </div>
+
     <section>
       <div class="content">
         <div class="info">
@@ -20,18 +30,12 @@
           <p>Te vemos em breve!</p>
         </div>
 
-        <div class="box">
-          <h5>Onde?</h5>
-          <p class="box-p">Filial São Paulo</p>
-          <p>Cidade: São Paulo</p>
-          <p>Estado: SP</p>
-
-          <h5>Quando?</h5>
-          <p><span>Dia 20/09/2021,</span><br />Quinta-feira</p>
-        </div>
+        <div id="box-container"></div>
 
         <div class="button">
-          <input type="button" value="Novo agendamento" />
+          <a href="/frontend/agendar/etapa1">
+            <input type="button" value="Novo agendamento" />
+          </a>
         </div>
       </div>
 

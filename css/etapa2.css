@@ -68,7 +68,7 @@ h2 {
 
 /* Container da direita */
 .right_container {
-  margin-left: 100px;
+  margin-left: 50px;
   align-items: flex-end;
   display: flex;
   flex-direction: column;
@@ -170,6 +170,19 @@ Quando o botão está "disabled", ele esconde o texto e altera as cores.
 
 .selected {
   border: 2px solid black;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.actions #error {
+  max-width: 300px;
+  color: rgb(241, 62, 62);
+  font-weight: bold;
 }
 
 /* Componente de carregamento */

@@ -3,6 +3,12 @@ const officeSelect = document.getElementById('office_select');
 const continueButton = document.getElementById('continue_button');
 const dateInput = document.getElementById('date_input');
 
+//Verificar se existe token
+const token = localStorage.getItem('token');
+if (!token) {
+  window.location.href = '/frontend/auth/login';
+}
+
 //Setar a data mínima para o agendamento
 dateInput.min = new Date().toISOString().split('T')[0];
 
@@ -37,6 +43,9 @@ function handleOfficeSelect(e) {
 //Chamar o backend para a lista de escritórios.
 fetch(listOfficesEndpoint, {
   method: 'GET',
+  headers: {
+    authorization: 'Bearer ' + token,
+  },
 })
   .then((res) => {
     return res.json();

@@ -8,9 +8,16 @@ if (!office || !date) {
   window.location.href = '/frontend/homepage';
 }
 
+//Verificar se existe token
+const token = localStorage.getItem('token');
+if (!token) {
+  window.location.href = '/frontend/auth/login';
+}
+
 const loaderContainer = document.getElementById('loading');
 const optionList = document.getElementById('select_desk');
 const button = document.getElementById('button');
+const errorText = document.getElementById('error');
 const listDesksEndpoint = 'https://fcagenda.herokuapp.com/desk/listdesks';
 
 //Carregar salas
@@ -20,6 +27,7 @@ fetch(listDesksEndpoint, {
   body: JSON.stringify({ date, office }),
   headers: {
     'Content-type': 'application/json; charset=UTF-8',
+    authorization: 'Bearer ' + token,
   },
 })
   .then((res) => {
@@ -90,6 +98,7 @@ function handleContinue(e) {
     body: JSON.stringify({ date, office, desk: parseInt(selectedDesk) }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
+      authorization: 'Bearer ' + token,
     },
   })
     .then((res) => {
@@ -97,8 +106,9 @@ function handleContinue(e) {
     })
     .then((data) => {
       if (data.errorId) {
-        alert('Algo deu errado! Tente novamente.');
-        window.location.reload();
+        errorText.innerText = data.message;
+        button.disabled = false;
+        button.className = 'enabled';
       } else {
         window.location.href =
           '/frontend/agendar/etapa3?appointment=' + data._id;

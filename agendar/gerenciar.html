@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FCAgenda - Gerenciar</title>
+    <link rel="stylesheet" href="../css/gerenciar.css" />
+    <script src="../js/gerenciar.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Componente de carregamento -->
+    <div id="loading">
+      <div class="loader">
+        <div></div>
+        <div></div>
+      </div>
+      <span>Carregando...</span>
+    </div>
+
+    <div id="nothing">
+      <h1>Nada por aqui...</h1>
+      <p>Você não tem nenhum agendamento para consultar.</p>
+      <br />
+      <a href="/frontend/agendar/etapa1">
+        <button>Agendar</button>
+      </a>
+    </div>
+
+    <section>
+      <h3><a href="/frontend/homepage">Voltar</a></h3>
+      <h1>Seus agendamentos</h1>
+      <br />
+      <div class="appointment-list" id="appointment-list"></div>
+    </section>
+  </body>
+</html>
