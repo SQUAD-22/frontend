@@ -74,7 +74,7 @@ function handleContinue() {
   const params = new URLSearchParams();
   params.append('date', dateInput.value);
   params.append('office', selectedOffice);
-  window.location.href = '/agendamento/estacao?' + params.toString();
+  window.location.href = '/frontend/agendar/etapa2?' + params.toString();
 }
 
 continueButton.addEventListener('click', handleContinue);

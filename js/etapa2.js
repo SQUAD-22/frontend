@@ -1,7 +1,53 @@
-const loaderContainer = document.getElementById('loading');
-loaderContainer.style.display = 'none';
+const params = new URLSearchParams(window.location.search);
+const office = params.get("office");
+const date = params.get("date");
 
+//Verificar se os parametros existem
+if(!office || !date) {
+  alert("Algo deu errado! Por favor, tente novamente.");
+  window.location.href="/frontend/homepage"
+}
+
+const loaderContainer = document.getElementById('loading');
 const optionList = document.getElementById('select_desk');
+const button = document.getElementById('button');
+const listDesksEndpoint = 'https://fcagenda.herokuapp.com/desk/listdesks';
+
+//Carregar salas
+//Chamar o backend para a lista de escritórios.
+fetch(listDesksEndpoint, {
+  method: 'POST',
+  body: JSON.stringify({date, office}),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((res) => {
+    return res.json();
+  })
+  //Adicionar opções na lista
+  .then((data) => {
+    const keys = Object.keys(data);
+    optionList.style.gridTemplateColumns = `repeat(${Math.ceil(keys.length / 5)}, 1fr)`;
+
+    Object.keys(data).forEach(deskId => {
+      const el = document.createElement('div');
+      el.className = 'option ';
+      el.innerHTML = deskId;
+      el.className += data[deskId].available ? data[deskId].isOccupied ? "occupied" : "available" : "unavailable"
+      el.dataset.deskid = deskId;
+      if(data[deskId].available && !data[deskId].isOccupied){
+        el.addEventListener("click", handleDesk)
+      }
+
+      optionList.appendChild(el)
+    })
+
+    loaderContainer.style.display = 'none';
+  })
+  .catch((err) => {
+    alert(err);
+  });
 
 let selectedDesk = '';
 
@@ -23,15 +69,24 @@ function handleDesk(e) {
   selectedDesk = deskid;
 }
 
-optionList.style.gridTemplateColumns = `repeat(${Math.ceil(237 / 5)}, 1fr)`;
+const createAppointmentEndpoint = 'https://fcagenda.herokuapp.com/appointment/create';
 
-for (let i = 1; i <= 237; i++) {
-  const el = document.createElement('div');
-  el.className = 'option';
-  el.innerHTML = i;
-  el.className += i % 2 ? ' unavailable' : ' available';
-  el.dataset.deskid = i;
-  if (!(i % 2)) el.addEventListener('click', handleDesk);
-
-  optionList.appendChild(el);
+//Criar novo agendamento
+function handleContinue(e){
+  fetch(createAppointmentEndpoint, {
+    method: 'POST',
+    body: JSON.stringify({date, office, desk: parseInt(selectedDesk)}),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+  .then((res) => {
+    return res.json();
+  })
+  .then(data => {
+    console.log(data)
+    alert("agendado! :)")
+  })
 }
+
+button.addEventListener("click", handleContinue)
