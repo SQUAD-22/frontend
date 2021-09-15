@@ -15,7 +15,7 @@ const token = params.get('token');
 //Verificar se os dados foram passados.
 if (!email || !token) {
   alert('Não conseguimos extrair as informações necessárias. Tente novamente.');
-  window.location.href = '/login';
+  window.location.href = '/frontend/auth/login';
 }
 
 //Colocar o email do usuário no campo
@@ -53,7 +53,7 @@ function handleSubmit(e) {
         //Se não tiver erro, guarda o token de autenticação
         localStorage.setItem('token', data.token);
         //Redireciona o usuário pra página principal
-        window.location.href = '/home';
+        window.location.href = '/frontend/homepage';
       }
     });
 }

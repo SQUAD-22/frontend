@@ -48,6 +48,10 @@ section h1 {
   margin-bottom: 5px;
 }
 
+section span {
+  text-align: center;
+}
+
 /*
 Container do input
 A gente envolve o <input/> dentro desse container pra

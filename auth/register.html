@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/auth.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="../js/register.js" defer></script>
+    <title>FCAgenda - Criar nova conta</title>
+  </head>
+  <body>
+    <section>
+      <img src="../assets/logo.png" alt="" />
+      <br />
+      <h1>Criar uma conta</h1>
+      <span>
+        Novo por aqui?<br />Insira seu e-mail e te enviaremos um e-mail de
+        confirmação.
+      </span>
+      <br />
+      <form id="form">
+        <div class="input-container">
+          <input
+            type="text"
+            id="email-input"
+            placeholder="consultor@fcamara.com.br"
+            title="Digite um email com o domínio fcamara.com.br"
+            required
+          />
+          <i class="fas fa-at fa-lg"></i>
+        </div>
+
+        <br />
+
+        <div class="actions">
+          <button id="button" type="submit" class="enabled">
+            <span>Entrar</span>
+            <i class="fas fa-circle-notch fa-spin"></i>
+          </button>
+        </div>
+      </form>
+      <br />
+      <span id="error"></span>
+    </section>
+  </body>
+</html>
