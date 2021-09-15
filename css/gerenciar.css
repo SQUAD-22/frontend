@@ -29,6 +29,7 @@ section {
 a {
   text-decoration: none;
   color: #fe4400;
+  font-weight: bold;
 }
 
 .appointment-list {
