@@ -92,6 +92,34 @@ button {
 
 button:hover {
   cursor: pointer;
+  background-color: #d03800;
+}
+
+/*
+Botão em seu estado normal, escondendo o ícone de carregamento.
+*/
+.enabled i {
+  display: none;
+}
+
+/*
+Quando o botão está "disabled", ele esconde o texto e altera as cores.
+*/
+.disabled {
+  background-color: lightgray;
+}
+
+.disabled span {
+  display: none;
+}
+
+.disabled i {
+  color: rgb(39, 39, 39);
+}
+
+.disabled:hover {
+  background-color: rgb(197, 197, 197);
+  cursor: wait;
 }
 
 #select_desk {
