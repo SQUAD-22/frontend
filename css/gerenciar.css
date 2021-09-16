@@ -14,10 +14,6 @@
 Como só temos um section principal, podemos alterar diretamente ela.
 Apenas um flex column centralizado com padding para o mobile
 */
-body > img {
-  margin-top: 60px;
-  margin-left: 76px;
-}
 
 section {
   display: flex;
