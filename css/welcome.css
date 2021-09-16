@@ -20,7 +20,6 @@ main {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  margin-top: 100px;
 }
 
 /* Container da esquerda, com a ilustração*/
@@ -28,6 +27,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 50px 20px 0 0;
 }
 
 .container_left img {
@@ -55,8 +55,8 @@ main {
 }
 
 .container_right h1 {
-  margin-top: 40px;
-  font-weight: bold;
+  margin: 40px 0 50px 0;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -68,18 +68,18 @@ main {
 }
 
 .container_right p {
-  max-width: 500px;
   width: 100%;
+  font-weight: 500;
   text-align: center;
   color: #636363;
 }
 
 .button_area {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  margin-top: 15px;
-  margin-bottom: 35px;
+  margin: 55px 0 75px 0;
+  width: 100%;
 }
 
 .button_area button {
@@ -98,10 +98,9 @@ main {
 .button_area .cadastrar {
   background-color: #4b4fa1;
   display: flex;
-
   font-size: 1.20rem;
   font-weight: 600;
-  padding: 10px 20px;
+  padding: 10px 25px;
   border-radius: 64px;
   color: #fff;
   margin-right: 15px;
@@ -109,9 +108,8 @@ main {
 
 .button_area .entrar {
   background-color: #fc6027;
-  padding: 10px 20px;
+  padding: 10px 40px;
   display: flex;
-
   font-size: 1.20rem;
   font-weight: 600;
   border-radius: 64px;
@@ -132,8 +130,9 @@ main {
 }
 
 .button_area i {
-  margin-left: 10px;
+  margin-left: 15px;
 }
+
 
 @media (max-width: 560px) {
   .button_area {
