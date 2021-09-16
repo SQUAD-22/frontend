@@ -53,7 +53,7 @@ section p {
   margin-bottom: 10px;
 }
 
-section span {
+section > span {
   text-align: center;
   margin-bottom: 10px;
 }
