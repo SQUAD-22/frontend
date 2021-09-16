@@ -16,6 +16,12 @@
   transition: all 0.2s ease-in-out;
 }
 
+body > img {
+  width: 180px;
+  margin-top: 60px;
+  margin-left: 76px;
+}
+
 /* 
 Como só temos um section principal, podemos alterar diretamente ela.
 Apenas um flex column centralizado com padding para o mobile
@@ -29,13 +35,8 @@ section {
 
   width: 100%;
   max-width: 400px;
-  height: 95vh;
 
-  margin: 0 auto;
-}
-
-section img {
-  width: 180px;
+  margin: 300px auto 0 auto;
 }
 
 section form {
