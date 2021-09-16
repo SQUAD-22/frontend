@@ -23,7 +23,11 @@ section {
   max-width: 800px;
   height: 95vh;
 
-  margin: 0 auto;
+  margin: 200px auto 0;
+}
+
+section h1 {
+  text-align: center;
 }
 
 a {
