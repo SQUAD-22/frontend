@@ -11,36 +11,37 @@
   </head>
 
   <body>
-    <!-- Componente de carregamento -->
-    <div id="loading">
-      <div class="loader">
-        <div></div>
-        <div></div>
+    <img src="./assets/logo.png" width="180px" />
+
+    <main>
+      <!-- Componente de carregamento -->
+      <div id="loading">
+        <div class="loader">
+          <div></div>
+          <div></div>
+        </div>
+        <span>Carregando...</span>
       </div>
-      <span>Carregando...</span>
-    </div>
-
-    <section class="left_container">
-      <img src="./assets/logo.png" width="180px" />
-      <h1 id="welcome-text">Bom dia, usuário!</h1>
-      <h2>Como podemos te ajudar?</h2>
-      <button
-        onclick='window.location.href="/frontend/agendar/etapa1"'
-        class="orange"
-      >
-        Novo agendamento
-      </button>
-      <button
-        onclick='window.location.href="/frontend/agendar/gerenciar"'
-        class="blue"
-      >
-        Gerenciar agendamentos
-      </button>
-      <h2 id="appointment-count"></h2>
-    </section>
-
-    <section class="right_container">
-      <img src="./assets/pessoa-calendario.svg" />
-    </section>
+      <section class="left_container">
+        <h1 id="welcome-text">Bom dia, usuário!</h1>
+        <h2>Como podemos te ajudar?</h2>
+        <button
+          onclick='window.location.href="/frontend/agendar/etapa1"'
+          class="orange"
+        >
+          Novo agendamento
+        </button>
+        <button
+          onclick='window.location.href="/frontend/agendar/gerenciar"'
+          class="blue"
+        >
+          Gerenciar agendamentos
+        </button>
+        <h2 id="appointment-count"></h2>
+      </section>
+      <section class="right_container">
+        <img src="./assets/pessoa-calendario.svg" />
+      </section>
+    </main>
   </body>
 </html>

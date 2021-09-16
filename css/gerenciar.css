@@ -14,6 +14,7 @@
 Como só temos um section principal, podemos alterar diretamente ela.
 Apenas um flex column centralizado com padding para o mobile
 */
+
 section {
   display: flex;
   flex-direction: column;
@@ -23,7 +24,7 @@ section {
   max-width: 800px;
   height: 95vh;
 
-  margin: 0 auto;
+  margin: 200px auto 0;
 }
 
 a {

@@ -27,13 +27,18 @@
   background-color: var(--blue);
 }
 
+body > img {
+  margin-top: 60px;
+  margin-left: 76px;
+}
+
 /* Container principal centralizado */
-body {
+main {
   width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 200px;
 }
 
 /* Container da esquerda, principal */

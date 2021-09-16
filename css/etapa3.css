@@ -9,6 +9,11 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+body > img {
+  margin-top: 60px;
+  margin-left: 76px;
+}
+
 section {
   display: flex;
   justify-content: center;
