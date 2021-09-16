@@ -134,3 +134,17 @@ main {
 .button_area i {
   margin-left: 10px;
 }
+
+@media (max-width: 560px) {
+  .button_area {
+    flex-direction: column-reverse;
+  }
+
+  .button_area .entrar {
+    margin-bottom: 15px;
+  }
+
+  .button_area .cadastrar {
+    margin: 0;
+  }
+}
