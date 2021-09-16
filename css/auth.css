@@ -46,11 +46,16 @@ section form {
 
 section h1 {
   font-size: 2rem;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+section p {
+  margin-bottom: 10px;
 }
 
 section span {
   text-align: center;
+  margin-bottom: 10px;
 }
 
 /*
