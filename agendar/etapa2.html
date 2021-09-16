@@ -23,48 +23,47 @@
 
   <body>
     <img src="../assets/logo.png" width="180px" />
-    
-    <!-- Componente de carregamento -->
-    <div id="loading">
-      <div class="loader">
-        <div></div>
-        <div></div>
-      </div>
-      <span>Carregando...</span>
-    </div>
 
-    <section class="left_container">
-      <br />
-      <h1>Ótimo!</h1>
-      <h2>
-        Agora, precisamos que você selecione<br />a sua estação de trabalho.
-      </h2>
-
-      <div class="detail">
-        <div>
-          <div class="available"></div>
-          <span>Disponível</span>
+    <main>
+      <!-- Componente de carregamento -->
+      <div id="loading">
+        <div class="loader">
+          <div></div>
+          <div></div>
         </div>
-        <div>
-          <div class="occupied"></div>
-          <span>Ocupado</span>
-        </div>
-        <div>
-          <div class="unavailable"></div>
-          <span>Indisponível</span>
-        </div>
+        <span>Carregando...</span>
       </div>
-    </section>
-
-    <section class="right_container">
-      <div id="select_desk"></div>
-      <div class="actions">
-        <span id="error"></span>
-        <button id="button" type="submit" class="enabled">
-          <span>Entrar</span>
-          <i class="fas fa-circle-notch fa-spin"></i>
-        </button>
-      </div>
-    </section>
+      <section class="left_container">
+        <br />
+        <h1>Ótimo!</h1>
+        <h2>
+          Agora, precisamos que você selecione<br />a sua estação de trabalho.
+        </h2>
+        <div class="detail">
+          <div>
+            <div class="available"></div>
+            <span>Disponível</span>
+          </div>
+          <div>
+            <div class="occupied"></div>
+            <span>Ocupado</span>
+          </div>
+          <div>
+            <div class="unavailable"></div>
+            <span>Indisponível</span>
+          </div>
+        </div>
+      </section>
+      <section class="right_container">
+        <div id="select_desk"></div>
+        <div class="actions">
+          <span id="error"></span>
+          <button id="button" type="submit" class="enabled">
+            <span>Entrar</span>
+            <i class="fas fa-circle-notch fa-spin"></i>
+          </button>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

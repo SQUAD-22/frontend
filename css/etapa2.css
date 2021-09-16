@@ -22,9 +22,13 @@
 }
 
 /* Container principal centralizado */
-body {
+body > img {
+  margin-top: 60px;
+  margin-left: 76px;
+}
+
+main {
   width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,7 +206,7 @@ Quando o botão está "disabled", ele esconde o texto e altera as cores.
 
 /* Media queries */
 @media (max-width: 1024px) {
-  body {
+  main {
     flex-direction: column;
   }
   .right_container {
@@ -210,7 +214,7 @@ Quando o botão está "disabled", ele esconde o texto e altera as cores.
     margin-top: 20px;
     width: 100%;
   }
-  body {
+  main {
     align-items: flex-start;
     justify-content: flex-start;
     padding: 20px;
